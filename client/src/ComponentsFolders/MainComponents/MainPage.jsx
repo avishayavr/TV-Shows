@@ -1,18 +1,17 @@
 import React from "react";
-// import axios from "axios";
 import { useState, useEffect } from "react";
 import TemplateComp from "./TemplateComp";
-import { getData, actionFilter } from "../Genres";
+import { getData, showsFilter } from "../Genres";
 
 export default function MainPage() {
   const [action, setAction] = useState([]);
-  const [drama, setDrama] = useState([]);
+  
 
   const getDataF = async () => {
     // const { data: shows } = await axios.get("http://localhost:8000/api/shows");
     // const newData = [...shows];
     await getData()
-    const shows =  actionFilter("Action")
+    const shows =  showsFilter("Action")
     setAction(shows);
     // const newDataDrama = [...shows];
     // let actionShows = newData.filter((show) => show.genres[0] == "Action");
@@ -27,12 +26,12 @@ export default function MainPage() {
     <div>
       <h1>MainPage</h1>
       <br />
-      <TemplateComp data={actionFilter("Action")} />
-      <TemplateComp data={actionFilter("Drama")} />
-      <TemplateComp data={actionFilter("Comedy")} />
-      <TemplateComp data={actionFilter("Fantasy")} />
-      <TemplateComp data={actionFilter("Horror")} />
-      <TemplateComp data={actionFilter("History")} />
+      <TemplateComp data={showsFilter("Action")} />
+      <TemplateComp data={showsFilter("Drama")} />
+      <TemplateComp data={showsFilter("Comedy")} />
+      <TemplateComp data={showsFilter("Fantasy")} />
+      <TemplateComp data={showsFilter("Horror")} />
+      <TemplateComp data={showsFilter("History")} />
     </div>
   );
 }

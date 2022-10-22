@@ -6,7 +6,8 @@ import MainPage from './MainComponents/MainPage'
 
 export default function HomePage() {
   return (
-    <div>
+    <div style={{backgroundColor:" #141414"}}>
+      <NavbarComp/>
       <Header/>
       <MainPage/>
     </div>

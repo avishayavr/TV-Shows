@@ -8,14 +8,20 @@ export const getData = async () => {
 };
 
 
-// filter for action shows
-export const actionFilter = (genre) =>{
+// filter by genre
+export const showsFilter = (genre) =>{
   const newData = [...shows];
-    let actionShows = newData.filter((show,i) => {
+    let filterShows = newData.filter((show,i) => {
       if(show.genres[0]  === genre || show.genres[1]  === genre || show.genres[2]  === genre){
         return show;
       }
     } );
-    return actionShows;
+    return filterShows;
+  }
+// filter by rating
+export const ratingFilter = (genre) =>{
+  const newData = [...shows];
+    let topShows = newData.filter((show) => show.rating > 8.5);
+    return topShows;
   }
 
