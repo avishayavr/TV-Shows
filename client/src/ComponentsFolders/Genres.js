@@ -7,7 +7,6 @@ export const getData = async () => {
   return shows;
 };
 
-// export default getData;
 
 // filter for action shows
 export const actionFilter = (genre) =>{
@@ -20,4 +19,3 @@ export const actionFilter = (genre) =>{
     return actionShows;
   }
 
-  // show.genres[0]  === genre
