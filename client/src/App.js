@@ -1,13 +1,11 @@
 import './App.css';
-import MainPage from './ComponentsFolders/MainComponents/MainPage';
-// import Example from "./ComponentsFolders/Example"
+import HomePage from './ComponentsFolders/MainComponents/HomePage';
 
 
 function App() {
   return (
     <div className="App">
-      {/* <Example/> */}
-      <MainPage/>
+      <HomePage/>
     </div>
   );
 }
