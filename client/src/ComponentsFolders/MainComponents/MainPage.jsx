@@ -31,7 +31,7 @@ export default function MainPage() {
       <TemplateComp data={showsFilter("Comedy")} />
       <TemplateComp data={showsFilter("Fantasy")} />
       <TemplateComp data={showsFilter("Horror")} />
-      <TemplateComp data={showsFilter("History")} />
+      <TemplateComp data={showsFilter("Anime")} />
     </div>
   );
 }
