@@ -17,7 +17,7 @@ export default function MainPage() {
     getDataF();
   }, []);
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <TemplateComp data={showsFilter("Action")} text={"Action"} />
       <TemplateComp data={showsFilter("Drama")} text={"Drama"} />
       <TemplateComp data={showsFilter("Comedy")} text={"Comedy"} />

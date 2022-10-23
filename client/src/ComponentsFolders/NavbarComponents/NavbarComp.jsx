@@ -3,8 +3,8 @@ import React from 'react'
 
 export default function NavbarComp() {
   return (
-    <div>
-      <div className="navbar ">
+    <div className='flex justify-center'>
+      <div className="navbar w-5/6 ">
   <div className="navbar-start">
     <a className="btn btn-ghost normal-case text-xl">AtlasNET</a>
   </div>
