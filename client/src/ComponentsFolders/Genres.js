@@ -4,7 +4,7 @@ export const getData = async () => {
   let response = await fetch("http://localhost:8000/api/shows");
   let data = await response.json();
   shows = data
-  return shows;
+  return data;
 };
 
 
@@ -19,9 +19,9 @@ export const showsFilter = (genre) =>{
     return filterShows;
   }
 // filter by rating
-export const ratingFilter = (genre) =>{
+export const ratingFilter = () =>{
   const newData = [...shows];
-    let topShows = newData.filter((show) => show.rating >= 8.5);
+    let topShows = newData.filter((show) => show.rating > 8.5);
     return topShows;
   }
 
