@@ -21,7 +21,7 @@ export const showsFilter = (genre) =>{
 // filter by rating
 export const ratingFilter = (genre) =>{
   const newData = [...shows];
-    let topShows = newData.filter((show) => show.rating > 8.5);
+    let topShows = newData.filter((show) => show.rating >= 8.5);
     return topShows;
   }
 

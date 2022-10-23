@@ -20,8 +20,8 @@ export default function Header() {
    <div className="carousel-inner">
     {data.map((show, i) =>{
       return(
-        <div className="carousel-item active" key={i}>
-        <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" className="d-block w-100" alt="Camera"/>
+        <div className="carousel-item" key={i}>
+        <img src={show.imageOriginal} className="d-block w-100" alt="Camera"/>
         <div className="carousel-caption d-none d-md-block">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
