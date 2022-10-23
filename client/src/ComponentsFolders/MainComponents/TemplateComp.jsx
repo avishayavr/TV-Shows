@@ -1,13 +1,10 @@
 import React from 'react'
 import "../../style/MainPage.css"
-// import { useState } from 'react'
-
+import ModalComp from '../ModalComp'
 export default function TemplateComp(props) {
 
-    // const [data, setData] = useState(props.action)
-
   return (
-    <div style={{border:"1px solid rgb(181, 8, 17)" , borderRadius:"40px", marginTop:"50px", width:"95%", padding:"10px"}}>
+    <div onClick={() => <ModalComp modal={true}/>} style={{border:"1px solid rgb(181, 8, 17)" , borderRadius:"40px", marginTop:"50px", width:"95%", padding:"10px"}}>
       <h1>{props.text}</h1>
         <div className="carousel carousel-center p-4 space-x-4 rounded-box ">
             {props.data.map((show, i) =>{
