@@ -16,7 +16,6 @@ export default function ModalComp(props) {
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
               perferendis suscipit officia recusandae, eveniet quaerat assumenda
-              id fugit, dignissimos maxime non natus placeat illo iusto!
             </p>
             <button className="close-modal" onClick={() => setModal(!modal)}>
               CLOSE
