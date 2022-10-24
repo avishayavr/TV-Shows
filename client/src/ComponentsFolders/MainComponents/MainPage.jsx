@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import TemplateComp from "./TemplateComp";
-import { getData, showsFilter } from "../Genres";
+import {showsFilter ,getData} from "../Genres";
 
 export default function MainPage() {
   const [action, setAction] = useState([]);

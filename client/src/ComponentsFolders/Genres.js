@@ -18,6 +18,7 @@ export const showsFilter = (genre) =>{
     } );
     return filterShows;
   }
+  
 // filter by rating
 export const ratingFilter = () =>{
   const newData = [...shows];
