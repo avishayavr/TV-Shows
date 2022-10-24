@@ -1,28 +1,10 @@
 import React from 'react'
-import { useState } from 'react'
-import "../style/ModalComp.css"
+import TemplateComp from './MainComponents/TemplateComp'
+export default function ModalComp() {
 
-export default function ModalComp(props) {
-
-    const [modal, setModal] = useState(props.modal)
-
-  return (
-    <div>ModalComp<br/>
-      {/* {modal && ( */}
-        <div className="modal">
-          <div onClick={() => setModal(!modal)} className="overlay"></div>
-          <div className="modal-content">
-            <h2>Hello Modal</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-              perferendis suscipit officia recusandae, eveniet quaerat assumenda
-            </p>
-            <button className="close-modal" onClick={() => setModal(!modal)}>
-              CLOSE
-            </button>
-          </div>
+    return (
+        <div>
+            {/* <!-- The button to open modal --> */}
         </div>
-      {/* )} */}
-    </div>
-  )
+    )
 }
