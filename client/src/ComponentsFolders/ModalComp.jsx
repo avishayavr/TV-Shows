@@ -18,8 +18,7 @@ export default function ModalComp(props) {
               perferendis suscipit officia recusandae, eveniet quaerat assumenda
               id fugit, dignissimos maxime non natus placeat illo iusto!
               Sapiente dolorum id maiores dolores? Illum pariatur possimus
-              quaerat ipsum quos molestiae rem aspernatur dicta tenetur. Sunt
-              placeat tempora vitae enim incidunt porro fuga ea.
+              quaerat ipsum quos molestiae rem aspernatur dicta tenetu.
             </p>
             <button className="close-modal" onClick={() => setModal(!modal)}>
               CLOSE
