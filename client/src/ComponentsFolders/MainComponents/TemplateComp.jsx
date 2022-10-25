@@ -32,7 +32,7 @@ export default function TemplateComp({ data, text }) {
               <label htmlFor={`my-modal-${show.name}-${i}`} className="w-full">
                 <img src={show.imageMedium} className="rounded-box" />
               </label>
-              <ModalComp key={i} name={show.name} indexId={`my-modal-${show.name}-${i}`} />
+              <ModalComp key={i} data={show} indexId={`my-modal-${show.name}-${i}`} />
               {/* <!-- Put this part before </body> tag --> */}
               {/* <input
                   type="checkbox"
