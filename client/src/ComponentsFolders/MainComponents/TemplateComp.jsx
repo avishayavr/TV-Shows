@@ -22,7 +22,6 @@ export default function TemplateComp({ data, text }) {
       }}
     >
       <h1>{text}</h1>        
-      {/* <button onClick={() => console.log(movieList)}>click</button> */}
 
       <div className="carousel carousel-center p-4 space-x-4 rounded-box ">
         {movieList.length > 0 && movieList.map((show, i) => {
@@ -33,24 +32,6 @@ export default function TemplateComp({ data, text }) {
                 <img src={show.imageMedium} className="rounded-box" />
               </label>
               <ModalComp key={i} data={show} indexId={`my-modal-${show.name}-${i}`} />
-              {/* <!-- Put this part before </body> tag --> */}
-              {/* <input
-                  type="checkbox"
-                  id="my-modal-6"
-                  className="modal-toggle"
-                />
-                <div className="modal modal-bottom sm:modal-middle">
-                  <div className="modal-box">
-                    <h3 className="font-bold text-lg">
-                      {show.name}
-                    </h3>
-                    <div className="modal-action">
-                      <label htmlFor="my-modal-6" className="btn">
-                        Close
-                      </label>
-                    </div>
-                  </div>
-                </div> */}
             </div>
           );
         })}
