@@ -1,15 +1,15 @@
 import React from "react";
-// import { useEffect } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../style/LoadingPage.css";
 
 export default function LoadingPage() {
-//   let navigate = useNavigate();
-//   useEffect(() => {
-//     setTimeout(() => {
-//       navigate("homePage");
-//     }, "5000");
-//   }, []);
+  let navigate = useNavigate();
+  useEffect(() => {
+    setTimeout(() => {
+      navigate("homePage");
+    }, "5000");
+  }, []);
   return (
     
      <div className="loadingPage">
