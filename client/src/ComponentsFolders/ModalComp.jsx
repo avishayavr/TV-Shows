@@ -18,7 +18,7 @@ export default function ModalComp({ data, indexId }) {
           className="modal-box"
         >
           {/* top of the modal */}
-          <div className="top flex justify-evenly">
+          <div className="top flex justify-evenly items-center">
             <div className="pic">
               <img src={data.imageMedium} />
             </div>
@@ -37,7 +37,8 @@ export default function ModalComp({ data, indexId }) {
             <Markup content={data.summary} />
              </div>
              {/* div for a close btn */}
-            <div className="modal-action">
+            <div className="modal-action flex justify-center
+            ">
               <label
                 style={{ backgroundColor: "rgb(181, 8, 17)" }}
                 htmlFor={indexId}
