@@ -1,26 +1,25 @@
-import React from 'react'
-import ShowComp from './ShowComp'
-import { getData } from '../Genres'
-import { useState } from 'react'
-import { useEffect } from 'react'
+import React from "react";
+import ShowComp from "./ShowComp";
 
-export default function MainSearchComp() {
+export default function MainSearchComp({updatedData}) {
+  
+  const displayMargin = () =>{
+    if (updatedData.length < 1) return "135px"
+  }
 
-    const [shows, setShows] = useState([])
+  const displayHeight = () =>{
+    if (updatedData.length < 1) return "80vh"
+  }
 
-    const setDataFun = async ()=>{
-      const data = await getData();
-      setShows(data);
-      console.log(data);
-    }
-
-    useEffect(() =>{
-      setDataFun();
-    },[])
 
   return (
-    <div className='flex flex-wrap justify-evenly'>
-    {shows.map((show, i)=> <ShowComp data={show} />)}
+    <div>
+      <div className="flex flex-wrap justify-evenly" style={{margin:displayMargin(), height:displayHeight()}}>
+        {updatedData.map((show, i) => (
+          <ShowComp data={show} key={i}/>
+        ))}
+      </div>
+      {/* <div style={{display:"none"}}></div> */}
     </div>
-  )
+  );
 }
