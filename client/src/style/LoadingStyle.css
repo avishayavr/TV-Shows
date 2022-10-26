@@ -1,6 +1,7 @@
-.loadingPage{
-    background: " #141414";
-}
+/* .amir{
+    background: #141414 !important;
+} */
+
 #load {
     position:absolute;
     width:600px;
@@ -30,7 +31,6 @@
     -o-transform:rotate(180deg);
     -moz-transform:rotate(180deg);
     -webkit-transform:rotate(180deg);
-    /* // background-color: #141414; */
     color:rgb(181, 8, 17);
   }
   
@@ -69,6 +69,13 @@
     -o-animation-delay:1.2s;
     -moz-animation-delay:1.2s;
     -webkit-animation-delay:1.2s;
+  }
+
+  #load div:nth-child(8) {
+    animation-delay:1.4s;
+    -o-animation-delay:1.4s;
+    -moz-animation-delay:1.4s;
+    -webkit-animation-delay:1.4s;
   }
   
   @keyframes move {

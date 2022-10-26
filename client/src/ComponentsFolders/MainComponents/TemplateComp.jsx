@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import "../../style/MainPage.css";
+// import "../../style/MainPage.css";
 import ModalComp from "../ModalComp";
 
 export default function TemplateComp({ data, text }) {
@@ -9,7 +9,7 @@ export default function TemplateComp({ data, text }) {
   // console.log(data);
   useEffect(() => {
     setMovieList(data)
-    console.log(movieList);
+    // console.log(movieList);
   }, [data])
   return (
     <div
@@ -25,7 +25,7 @@ export default function TemplateComp({ data, text }) {
 
       <div className="carousel carousel-center p-4 space-x-4 rounded-box ">
         {movieList.length > 0 && movieList.map((show, i) => {
-          console.log(show);
+          // console.log(show);
           return (
             <div className="carousel-item" key={i}>
               <label htmlFor={`my-modal-${show.name}-${i}`} className="w-full">
