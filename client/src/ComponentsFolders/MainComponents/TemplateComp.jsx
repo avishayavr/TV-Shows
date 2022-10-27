@@ -1,15 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-// import "../../style/MainPage.css";
 import ModalComp from "../ModalComp";
 
 export default function TemplateComp({ data, text }) {
-  const [movieList, setMovieList] = useState([])
-  // console.log(data);
+  const [showList, setShowList] = useState([])
   useEffect(() => {
-    setMovieList(data)
-    // console.log(movieList);
+    setShowList(data)
   }, [data])
   return (
     <div
@@ -24,13 +21,14 @@ export default function TemplateComp({ data, text }) {
       <h1>{text}</h1>        
 
       <div className="carousel carousel-center p-4 space-x-4 rounded-box ">
-        {movieList.length > 0 && movieList.map((show, i) => {
-          // console.log(show);
-          return (
+        {/* iteration to render the shows */}
+        {showList.length > 0 && showList.map((show, i) => {         
+           return (
             <div className="carousel-item" key={i}>
               <label htmlFor={`my-modal-${show.name}-${i}`} className="w-full">
                 <img src={show.imageMedium} className="rounded-box" />
               </label>
+              {/* a pop out model for each show */}
               <ModalComp key={i} data={show} indexId={`my-modal-${show.name}-${i}`} />
             </div>
           );

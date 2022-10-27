@@ -1,16 +1,32 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import TemplateComp from "./TemplateComp";
-import {showsFilter ,getData} from "../Genres";
+import { getData } from "../Genres";
 
 export default function MainPage() {
-  const [action, setAction] = useState([]);
-  
+  const [shows, setShows] = useState([]);
 
+  // function to get data and activate the show filter
   const getDataF = async () => {
-    await getData()
-    const shows =  showsFilter("Action")
-    setAction(shows);
+    const data = await getData();
+    // const shows =  showsFilter("")
+    // setAction(shows);
+    setShows(data);
+  };
+
+  // function to filter the shows by genre
+  const showsFilter = (genre) => {
+    const newData = [...shows];
+    let filterShows = newData.filter((show) => {
+      if (
+        show.genres[0] === genre ||
+        show.genres[1] === genre ||
+        show.genres[2] === genre
+      ) {
+        return show;
+      }
+    });
+    return filterShows;
   };
 
   useEffect(() => {
@@ -18,6 +34,7 @@ export default function MainPage() {
   }, []);
   return (
     <div className="flex flex-col items-center">
+      {/* render the carousel by genres */}
       <TemplateComp data={showsFilter("Action")} text={"Action"} />
       <TemplateComp data={showsFilter("Drama")} text={"Drama"} />
       <TemplateComp data={showsFilter("Comedy")} text={"Comedy"} />

@@ -1,15 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-// import LoadingPage from "../AnimationComp/LoadingPage";
 
 export default function NavbarComp() {
   let navigate = useNavigate();
 
   const navigationFun = () => {
-    navigate("/");
     setTimeout(() => {
       navigate("/searchComp");
-    }, "4000");
+    }, "1000");
   };
 
   return (

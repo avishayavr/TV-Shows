@@ -15,10 +15,10 @@ export default function ModalComp({ data, indexId }) {
             backgroundColor: " #141414",
             border: "1px solid rgb(181, 8, 17)",
           }}
-          className="modal-box"
+          className="modal-box overflow-y-scroll"
         >
           {/* top of the modal */}
-          <div className="top flex justify-evenly items-center">
+          <div className="top flex sm:flex-row flex-col justify-evenly items-center">
             <div className="pic">
               <img src={data.imageMedium} />
             </div>
@@ -31,9 +31,8 @@ export default function ModalComp({ data, indexId }) {
               </a>
             </div>
           </div>
-          {/*end of top of the modal */}
           {/* div that display the description in the modal */}
-            <div className="description" >
+            <div className="description mt-2" >
             <Markup content={data.summary} />
              </div>
              {/* div for a close btn */}
