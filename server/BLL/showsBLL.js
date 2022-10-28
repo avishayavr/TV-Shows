@@ -40,13 +40,16 @@ exports.getAllData = async () => {
 
 // get show by id
 exports.getDataById = async (id) => {
+  console.log(id);
   return await showModel.findById(id);
 };
 
   // create show
 exports.createShow = async (obj) => {
+  try {
   const newShow = new showModel({
-    name: obj.name,
+          // _id:obj._id,
+          name: obj.name,
           genres: obj.genres,
           url: obj.url,
           premiered: obj.premiered,
@@ -58,8 +61,8 @@ exports.createShow = async (obj) => {
           summary:obj.summary
   });
 
-  try {
-    await newShow.save();
+    console.log(obj);
+    await newShow.save()
     return "created";
   } catch (error) {
     return "an error happened, panic now!!";

@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const showSchema = new mongoose.Schema({
+        //   _id:String,
           name: String,
           genres: [String],
           url: String,
@@ -13,5 +14,5 @@ const showSchema = new mongoose.Schema({
           summary:String
 });
 
-const model = mongoose.model("show", showSchema);
+const model = mongoose.model("shows", showSchema);
 module.exports = model;

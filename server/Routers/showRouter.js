@@ -19,7 +19,7 @@ router.get("/:id", async (req, res) => {
     const show = await showBLL.getDataById(id);
     res.status(200).json(show);
   } catch (error) {
-    res.status(500).json(e);
+    res.status(500).json(error);
   }
 });
 
@@ -29,7 +29,7 @@ router.post("/", async (req, res) => {
     const show = req.body;
     const status = await showBLL.createShow(show);
     res.status(200).json({ msg: status });
-    console.log(show);
+    // console.log(show);
   } catch (e) {
     res.status(500).json({ err: e });
   }
