@@ -1,8 +1,8 @@
 import './App.css';
 import {Routes,Route} from "react-router-dom";
-import HomePage from './ComponentsFolders/HomePage';
-import LoadingPage from './ComponentsFolders/AnimationComp/LoadingPage';
-import SearchComp from './ComponentsFolders/SearchComponents/SearchComp';
+import HomePage from './pages/HomePage';
+import LoadingPage from './pages/LoadingPage';
+import SearchComp from './pages/SearchPage';
 
 
 function App() {

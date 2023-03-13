@@ -1,5 +1,5 @@
 import React from "react";
-import LoadingTemplate from "./LoadingTemplate";
+import LoadingTemplate from "../ComponentsFolders/AnimationComp/LoadingTemplate";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 

@@ -11,20 +11,17 @@ export default function NavbarComp() {
   };
 
   return (
-    <div className="flex justify-center">
-      <div className="navbar w-5/6 ">
-        <div className="navbar-start">
-          <a className="btn btn-ghost normal-case text-xl">AtlasNET</a>
-        </div>
-        <div className="navbar-end">
-          <a
-            style={{ backgroundColor: "rgb(181, 8, 17)" }}
-            className="btn"
-            onClick={() => navigationFun()}
-          >
-            Search
-          </a>
-        </div>
+    <div className="flex justify-between items-center p-4 z-[100] w-full absolute">
+      <h1 className="text-red-600 text-4xl font bold cursor-pointer">
+        AtlasNET
+      </h1>
+      <div>
+        <button
+          className="text-white bg-red-600 px-6 py-2 rounded curser-pointer"
+          onClick={() => navigationFun()}
+        >
+          Search
+        </button>
       </div>
     </div>
   );

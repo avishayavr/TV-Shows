@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import TemplateComp from "./TemplateComp";
-import { getData } from "../Genres";
+import { getData } from "../../utils/Genres";
 
 export default function MainPage() {
   const [shows, setShows] = useState([]);

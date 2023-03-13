@@ -1,11 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
-import { getData } from '../Genres'
-import FooterComp from '../FooterComponents/FooterComp'
-import MainSearchComp from './MainSearchComp'
-import SearchInputComp from './SearchInputComp'
+import { getData } from '../utils/Genres'
+import FooterComp from '../ComponentsFolders/FooterComponents/FooterComp'
+import MainSearchComp from '../ComponentsFolders/SearchComponents/MainSearchComp'
+import SearchInputComp from '../ComponentsFolders/SearchComponents/SearchInputComp'
 import { useEffect } from 'react'
-import NotFoundComp from './NotFoundComp'
+import NotFoundComp from '../ComponentsFolders/SearchComponents/NotFoundComp'
 
 
 export default function SearchComp() {
