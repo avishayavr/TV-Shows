@@ -1,22 +1,22 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { getData } from "../../utils/Genres";
+// import { getData } from "../../utils/Genres";
 
 
 
 export default function Header() {
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
 
-  const show = data[Math.floor(Math.random() * data.length)]
+  // const show = data[Math.floor(Math.random() * data.length)]
 
-  const getDataFun = async () => {
-    const topShows = await getData();
-    setData(topShows);
-    // console.log(topShows);
-  };
-  useEffect(() => {
-    getDataFun();
-  }, []);
+  // const getDataFun = async () => {
+  //   const topShows = await getData();
+  //   setData(topShows);
+  //   // console.log(topShows);
+  // };
+  // useEffect(() => {
+  //   getDataFun();
+  // }, []);
 
   return (
     <div className="w-full h-[550px] text-white opacity-25">
